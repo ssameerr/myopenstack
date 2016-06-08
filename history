@@ -358,3 +358,160 @@
   358  git pull origin master
   359  git status 
   360  history > history
+  361  git status 
+  362  git add history
+  363  git commit -m "Its awesome, updated history"
+  364  git push origin master
+  365  cd
+  366  ll
+  367  ls -a
+  368  cd .ssh
+  369  ll
+  370  cat id_rsa.pub
+  371  cat id_rsa
+  372  history > history
+  373  git add history
+  374  ll
+  375  cat authorized_keys 
+  376  cd ~/myopenstack/
+  377  ll
+  378  git add *
+  379  cd /
+  380  ls
+  381  source keystonerc_admin
+  382  cd
+  383  source keystonerc_admin
+  384  source keystonerc_aliceanderson
+  385  nova flavor-list
+  386  source keystonerc_chestercopperpot
+  387  nova flavor-list
+  388  nova help flavor-create
+  389  source keystonerc_admin
+  390  nova flavor-create --is-public false secret.monster 8 125000 200 8
+  391  nova flavor-list
+  392  nova flavor-list --all
+  393  nova flavor-list
+  394  nova help | grep flavor
+  395  nova help flavor-access-add
+  396  keystone user-get admin
+  397  nova flavor-access-add 8 300b2cc45c3846939e589310ae714e46
+  398  nova flavor-list
+  399  keystone user-get aliceanderson
+  400  nova flavor-access-add 8 300b2cc45c3846939e589310ae714e46
+  401  keystone tenant-get cc1808ae64ac4c2594fd2b3f965af04b
+  402  nova flavor-access-add 8 cc1808ae64ac4c2594fd2b3f965af04b
+  403  nova image-list
+  404  neutron net-list
+  405  nova boot --flavor custom.shrimpy --image cirros --nic net-id=20ca30a2-e3fb-4e62-bd78-08dc471e93ed
+  406  nova boot --flavor custom.shrimpy --image cirros --nic net-id=20ca30a2-e3fb-4e62-bd78-08dc471e93ed vt1
+  407  nova list
+  408  nova show vt1
+  409  curl facebook.com
+  410  curl -X Post facebook.com
+  411  curl -X Post facebook.com | less
+  412  ls
+  413  clear
+  414  curl -s -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d '{"auth":{"tenantName":"admin","passwordCredentials":{"username":"admin","password":"alta3"}}}' | python -m json.tool | less
+  415  curl -v -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d '{"auth":{"tenantName":"admin","passwordCredentials":{"username":"admin","password":"alta34567"}}}' | python -m json.tool | less
+  416  clear
+  417  curl -v -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d '{"auth":{"tenantName":"admin","passwordCredentials":{"username":"admin","password":"alta34567"}}}' | python -m json.tool | grep http:// 
+  418  curl -s -X POST http://192.168.0.10:5000/v2.0/tokens -H "Content-Type: application/json" -d '{"auth":{"tenantName":"admin","passwordCredentials":{"username":"admin","password":"alta3"}}}' | python -m json.tool | grep http://
+  419  curl -v -X POST facebook.com 
+  420  curl -v -X POST http://www.facebook.com 
+  421  curl -h
+  422  curl -h | less
+  423  nova flavor-list
+  424  source keystonerc_admin
+  425  nova flavor-list
+  426  nova flavor-create custom.shrimpy 6 512 2 1
+  427  nova flavor-list
+  428  source keystonerc_aliceanderson
+  429  nova flavor-list
+  430  source keystonerc_chestercopperpot
+  431  nova flavor-list
+  432  vi keystonerc_aliceanderson 
+  433  printenv | grep OS
+  434  vi keystonerc_aliceanderson 
+  435  vi keystonerc_chestercopperpot 
+  436  nova flavor-list
+  437  printenv | grep OS
+  438  source keystonerc_chestercopperpot 
+  439  printenv | grep OS
+  440  nova flavor-list
+  441  curl -v -X POST http://www.facebook.com 
+  442  cd
+  443  cd q
+  444  cd /
+  445  cd ..
+  446  cd
+  447  cd 
+  448  cd root
+  449  cd q
+  450  cd /
+  451  source
+  452  source .bashrc
+  453  su
+  454  source keystonerc_chestercopperpot 
+  455  nova show vt1
+  456  nova list
+  457  neutron net-list
+  458  nova boot --flavor custom.shrimpy --image cirros --nic net-id=20ca30a2-e3fb-4e62-bd78-08dc471e93ed vt1
+  459  nova list
+  460  nova show vt1
+  461  nova pause vt1
+  462  nova show vt1
+  463  source keystonerc_aliceanderson 
+  464  printenv | grep OS_
+  465  neutron net-create acme-inc-router
+  466  neutron net-create acme-inc-network
+  467  neutron subnet-create --name acme-inc-network-subnet-10 --gateway 10.10.0.1 acme-inc-network 10.10.0.0/24
+  468  neutron router-gateway-set acme-inc-router-public
+  469  neutron router-gateway-set acme-inc-router public
+  470  neutron router-create  acme-inc-router && neutron router-gateway-set vault-tek-router public
+  471  neutron router-create  acme-inc-router && neutron router-gateway-set acme-inc-router public
+  472  neutron help | grep net-de
+  473  neutron net-delete acme-inc-router
+  474  neutron router-create  acme-inc-router && neutron router-gateway-set acme-inc-router public
+  475  neutron help | grep get
+  476  neutron help | grep router
+  477  neutron router-list 
+  478  router-delete acme-inc-router
+  479  neutron router-delete acme-inc-router
+  480  neutron router-delete 93b0a12f-311e-407e-a122-9e248f1083ee && neutron router-delete 6ede64ac-3ff2-407e-84ae-b8ea867a24c2
+  481   neutron router-gateway-set acme-inc-router public
+  482  neutron router-show acme-inc-router
+  483  neutron router-interface-add acme-inc-router acme-inc-network-subnet-10
+  484  neutron router-port-list 0d86aa20-ea83-4da4-9593-38c0389c08a0
+  485  source keystonerc_chestercopperpot
+  486  neutron net-create vault-tek-network
+  487  neutron subnet-create --name vault-tek-network-subnet-10 --gateway 10.10.0.1 vault-tek-network 10.10.0.0/24
+  488   neutron router-create vault-tek-router
+  489  neutron router-gateway-set vault-tek-router public
+  490  neutron router-interface-add vault-tek-router vault-tek-network-subnet-10
+  491  source keystonerc_admin
+  492  neutron subnet-list
+  493  neutron subnet-show vault-tek-network-subnet-10
+  494  source keystonerc_chestercopperpot
+  495  ssh root@neutron
+  496  source .bashrc
+  497  cat /var/log/nova/nova-conductor.log 
+  498  sh root@compute1
+  499  ssh root@compute1
+  500  yum install rsyslog
+  501  semanage -a -t syslogd_port_t -p udp 514
+  502  vim /etc/sysconfig/iptables
+  503  semanage -a -t syslogd_port_t -p udp 514
+  504  service iptables restart
+  505  source keystonerc_admin
+  506  glance image-list
+  507  glance help image-create
+  508  glance image-create --name cirros_alpha --disk-format qcow2 --container-format bare --is-public true --location https://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img
+  509  glance image-list
+  510  neutron net-list
+  511  nova boot --flavor custom.shrimpy --image cirros_alpha --nic net-id=20ca30a2-e3fb-4e62-bd78-08dc471e93ed admin_box
+  512  cd
+  513  source .bashrc
+  514  cd myopenstack
+  515  ls
+  516  git init
+  517  history>history
